@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caysus Dilan Rodrigues</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            transition: background 0.5s ease;
+            position: relative;
+        }
+        .profile-circle {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #e879f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background: white;
+        }
+        .profile-text {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        .company-highlight {
+            border-radius: 12px;
+            padding: 12px;
+            margin: 20px 0;
+        }
+        .email-box {
+            border-radius: 12px;
+            padding: 12px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            margin: 0 4px;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        .color-bar {
+            height: 4px;
+            border-radius: 2px;
+            margin-top: 20px;
+            display: flex;
+        }
+        .color-segment {
+            flex: 1;
+        }
+        .leaf, .snowflake, .star {
+            position: absolute;
+            user-select: none;
+            pointer-events: none;
+        }
+        .leaf {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+        .snowflake {
+            color: #fff;
+            font-size: 14px;
+        }
+        .star {
+            background-color: white;
+            border-radius: 50%;
+        }
+        .moon, .sun {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .sun {
+            background: radial-gradient(circle at center, #FFD700, #FF4500);
+            box-shadow: 0 0 40px #FF4500;
+        }
+        .footer {
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="background-effects"></div>
+    <div id="card" style="max-width: 400px; width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); padding: 40px; text-align: center; position: relative; z-index: 1;">
+        <!-- Header -->
+        <h1 id="header" style="font-size: 28px; font-weight: 700; margin-bottom: 30px; letter-spacing: -0.5px;">
+            Caysus Dilan Rodrigues
+        </h1>
+        <!-- Profile Circle -->
+        <div class="profile-circle" id="profile-circle">
+            <div class="profile-text" id="profile-text">
+                Caysus Dilan<br>
+                Rodrigues
+            </div>
+        </div>
+        <!-- Greeting -->
+        <p id="greeting" style="font-size: 20px; margin-bottom: 20px;">
+            hi 👋
+        </p>
+        <!-- Description -->
+        <p id="description" style="line-height: 1.6; margin-bottom: 16px; font-size: 15px;">
+            i'm caysus. product management and software engineering are my things.
+        </p>
+        <!-- Quote -->
+        <p id="quote" style="line-height: 1.6; margin-bottom: 24px; font-style: italic; font-size: 15px;">
+            a friend once told me it was ridiculous to have a personal website. i agree.
+        </p>
+        <!-- Current Role -->
+        <div class="company-highlight" id="company-highlight">
+            <p style="font-size: 15px;">
+                currently @ <span style="font-weight: 600;" id="company-name"><a href="https://niveussolutions.com/" style="color: inherit; text-decoration: none;" target="_blank">Niveus Solutions</a></span>
+            </p>
+        </div>
+        <!-- Email -->
+        <div class="email-box" id="email-box">
+            <a href="mailto:caysusdilanrodrigues@gmail.com">say hello!</a>
+        </div>
+        <!-- Social Icons -->
+        <div style="display: flex; justify-content: center; align-items: center; margin: 24px 0;">
+            <a href="mailto:hello@caysusrodrigues.com" class="social-icon" id="email-icon" style="background: #1e293b;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+            <a href="#" class="social-icon" id="linkedin-icon" style="background: #0A66C2;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="#" class="social-icon" id="github-icon" style="background: #333;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="path_to_your_resume.pdf" class="social-icon" id="resume-icon" style="background: #d35400;" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.18 2 12 2z"></path>
+                    <path d="M12 15.45l-6.82 2.81.73-3.22-2.44-2.04L12 5l3.55 4.2-2.44 2.04.73 3.22L12 15.45z"></path>
+                </svg>
+            </a>
+        </div>
+        <!-- Color Bar -->
+        <div class="color-bar">
+            <div class="color-segment" style="background: #22c55e;"></div>
+            <div class="color-segment" style="background: #3b82f6;"></div>
+            <div class="color-segment" style="background: #ec4899;"></div>
+            <div class="color-segment" style="background: #3b82f6;"></div>
+            <div class="color-segment" style="background: #1f2937;"></div>
+            <div class="color-segment" style="background: #6b7280;"></div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Made on Earth with ❤️</p>
+    </div>
+    <script>
+        function setDayTheme() {
+            document.body.style.background = 'linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%)';
+            document.getElementById('card').style.background = '#f8fafc';
+            document.getElementById('card').style.color = '#1f2937';
+            document.getElementById('header').style.color = '#1e293b';
+            document.getElementById('greeting').style.color = '#475569';
+            document.getElementById('description').style.color = '#64748b';
+            document.getElementById('quote').style.color = '#64748b';
+            document.getElementById('company-highlight').style.background = 'linear-gradient(135deg, #fce7f3 0%, #f3e8ff 100%)';
+            document.getElementById('company-name').style.color = '#a855f7';
+            document.getElementById('email-box').style.background = '#e2e8f0';
+            document.getElementById('email-box').style.color = '#334155';
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach(icon => {
+                icon.style.color = 'white';
+            });
+            const backgroundEffects = document.getElementById('background-effects');
+            backgroundEffects.innerHTML = '';
+            // Add sun
+            const sun = document.createElement('div');
+            sun.className = 'sun';
+            sun.style.width = '80px';
+            sun.style.height = '80px';
+            sun.style.left = '85vw';
+            sun.style.top = '15vh';
+            backgroundEffects.appendChild(sun);
+            // Add falling leaves
+            for (let i = 0; i < 15; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'leaf';
+                leaf.innerHTML = '🍃';
+                leaf.style.left = Math.random() * 100 + 'vw';
+                leaf.style.top = -10 + 'px';
+                leaf.style.opacity = Math.random();
+                leaf.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                leaf.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                backgroundEffects.appendChild(leaf);
+            }
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fall {
+                    0% {
+                        transform: translateY(-10px);
+                    }
+                    100% {
+                        transform: translateY(100vh);
+                    }
+                }
+                .leaf {
+                    animation: fall linear infinite;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        function setNightTheme() {
+            document.body.style.background = 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)';
+            document.getElementById('card').style.background = '#1f2937';
+            document.getElementById('card').style.color = '#fff';
+            document.getElementById('header').style.color = '#fff';
+            document.getElementById('greeting').style.color = '#d1d5db';
+            document.getElementById('description').style.color = '#9ca3af';
+            document.getElementById('quote').style.color = '#9ca3af';
+            document.getElementById('company-highlight').style.background = 'linear-gradient(135deg, #4c3f6d 0%, #3a2f5a 100%)';
+            document.getElementById('company-name').style.color = '#d1d5db';
+            document.getElementById('email-box').style.background = '#374151';
+            document.getElementById('email-box').style.color = '#d1d5db';
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach(icon => {
+                icon.style.color = 'white';
+            });
+            const backgroundEffects = document.getElementById('background-effects');
+            backgroundEffects.innerHTML = '';
+            // Add moon
+            const moon = document.createElement('div');
+            moon.className = 'moon';
+            moon.style.width = '60px';
+            moon.style.height = '60px';
+            moon.style.left = '85vw';
+            moon.style.top = '15vh';
+            moon.style.backgroundColor = '#f5f3ce';
+            moon.style.boxShadow = '0 0 30px #f5f3ce';
+            backgroundEffects.appendChild(moon);
+            // Add stars
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 2 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                backgroundEffects.appendChild(star);
+            }
+            // Add snowflakes
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.top = -10 + 'px';
+                snowflake.style.opacity = Math.random();
+                snowflake.style.fontSize = (Math.random() * 10 + 5) + 'px';
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                backgroundEffects.appendChild(snowflake);
+            }
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes snowfall {
+                    0% {
+                        transform: translateY(-10px);
+                    }
+                    100% {
+                        transform: translateY(100vh);
+                    }
+                }
+                .snowflake {
+                    animation: snowfall linear infinite;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        function updateTheme() {
+            const now = new Date();
+            const hours = now.getHours();
+            if (hours > 6 && hours < 18) {
+                setDayTheme();
+            } else {
+                setNightTheme();
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateTheme);
+    </script>
+</body>
+</html>
+
